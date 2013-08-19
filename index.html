@@ -15,6 +15,11 @@ Hello GitHub Pages
 <script type="text/javascript">
 $(function() {
     console.log('index.html');
+    var app=angular.module('app', []);
+    app.config(['$interpolateProvider', function($interpolateProvider) {
+        $interpolateProvider.startSymbol('{[{');
+        $interpolateProvider.endSymbol('}]}');
+    }]);
 });
 </script>
 
