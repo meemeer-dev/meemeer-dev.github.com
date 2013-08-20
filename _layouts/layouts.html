@@ -13,8 +13,12 @@
     <script type="text/javascript">
     $(function() {
         console.log('layouts.html');
+        var app=angular.module('app', []);
+        app.config(['$interpolateProvider', function($interpolateProvider) {
+            $interpolateProvider.startSymbol('{[{');
+            $interpolateProvider.endSymbol('}]}');
+        }]);
     });
     </script>
-
 </body>
 </html>
